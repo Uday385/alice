@@ -1,0 +1,21 @@
+# Production completion checklist
+
+- [x] Web dashboard shell
+- [x] API service
+- [x] Indicator engine
+- [x] Strategy scoring
+- [x] Risk sizing and guard
+- [x] Paper trade API
+- [x] Backtest API contract
+- [x] Alert API contract
+- [x] Broker safety boundary
+- [ ] Authentication + RBAC
+- [ ] Real market-data provider credentials
+- [ ] WebSocket ingestion worker
+- [ ] Real option-chain normalization + Greeks
+- [ ] Persistent paper-trading fills
+- [ ] Historical data store + realistic costs/slippage
+- [ ] Telegram/email notification provider
+- [ ] Broker OAuth/token vault
+- [ ] Compliance review and live-order controls
+- [ ] Production monitoring and audit logs

@@ -1,0 +1,30 @@
+services:
+  - type: web
+    name: alice-api
+    runtime: docker
+    rootDir: services/api
+    healthCheckPath: /health
+    plan: free
+    envVars:
+      - key: DATABASE_URL
+        fromDatabase:
+          name: alice-db
+          property: connectionString
+      - key: MARKET_DATA_PROVIDER
+        value: demo
+      - key: BROKER_PROVIDER
+        value: none
+      - key: LIVE_TRADING
+        value: "false"
+      - key: ALICE_MAX_RISK_PER_TRADE
+        value: "0.01"
+      - key: ALICE_MAX_DAILY_LOSS
+        value: "0.03"
+      - key: ALICE_MAX_TRADES_PER_DAY
+        value: "5"
+
+databases:
+  - name: alice-db
+    plan: free
+    databaseName: alice
+    user: alice
